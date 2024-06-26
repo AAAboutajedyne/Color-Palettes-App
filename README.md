@@ -1,50 +1,66 @@
-# Welcome to your Expo app 👋
+# Color Palettes App (Training/Course Material)
+This is a companion repo for the "Introduction to React Native" course. This application is built from scratch throughout the course.
+## About project
+<br/>
+Color Palettes is a React native mobile application to manage color palettes using:
+  - Expo features: Expo Router (File-based routing), Expo SDK, Expo dev client
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+  - React Navigation: to customize passing data between screens
+    - [USED_ALONGSIDE] Expo Router.
 
-## Get started
+  - Easy-peasy: for State management, easy and similar to Pinia (in Vue ecosystem)
+    - [ALTERNATIVE_TO] React-redux
 
-1. Install dependencies
+  - Vercel SWR: React Hooks for data fetching, which provides a Built-in cache (stale-while-revalidate strategy), request deduplication, remote mutation, ... 
+    - [USED_ALONGSIDE] natvie Fetch API
 
-   ```bash
-   npm install
-   ```
+  - TypeScript: for type-safety
+  
+### Features
+- Fetch color palettes from an API using native Fetch + useSWR/useSWRImmutable Vercel hooks
+- Store fetched data in a redux store using Easy-peasy
+- List all fetch color palettes
+- Pull down to refresh: uses Vercel SWR mutation API
+- Push "Add new palette" modal
+- Handle form inputs inside the modal
+- Merge new added palette with fetched palettes, and add them to redux store
+- Define computed properties in store (paletteNames, first5ColorsOf, ...) to derive state with great performance benefits
+- and more ...
 
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+## Setup
+1. Install dependencies:
 ```bash
-npm run reset-project
+> npm install
+```
+2. Since the app is using a developement build (expo-dev-client), you need to [build the app locally](https://docs.expo.dev/guides/local-app-development/) or use [EAS (Expo Application Services) build](https://docs.expo.dev/build/introduction/) 
+```bash
+# build app loacally
+  > npm run android[ | ios]
+  ##Or 
+  > npx expo run:android[ | ios]
+# EAS build ([REQUIREMENT] eas command needs to be installed, eas account is required)
+> eas build --platform android[ | ios]
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+3. Start the dev server & launch the app
+```bash
+> npm run start
+#Or 
+> expo start --android[ | ios]
+```
 
-## Learn more
+4. Scan QR code or press 'a'/'i' to start Android emulator / iOS simulator
 
-To learn more about developing your project with Expo, look at the following resources:
+## Credits:
+Thanks to:
+  - [React Native](https://reactnative.dev/docs/components-and-apis),
+  - [Expo](https://docs.expo.dev/versions/latest/),
+  - [Kadi Kraman](https://github.com/kadikraman) for her courses on FrontEndMasters/Egghead and Materials for this project,
+  - [Easy-peasy v6](https://easy-peasy.dev/),
+  - [Vercel SWR](https://swr.vercel.app/docs/api),
+  
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+<br/>
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+<p align="right">Written with Love ❤️</p>

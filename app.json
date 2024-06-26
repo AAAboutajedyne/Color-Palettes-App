@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "FrontendMasters_React_Native_v2",
-    "slug": "FrontendMasters_React_Native_v2",
+    "name": "Color Palettes",
+    "slug": "color-palettes",
+    "jsEngine": "hermes",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -13,13 +14,15 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "ColorPalettes"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "org.aaaboutajedyne.ColorPalettesApp"
     },
     "web": {
       "bundler": "metro",
