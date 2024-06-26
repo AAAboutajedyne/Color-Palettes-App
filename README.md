@@ -1,7 +1,6 @@
 # Color Palettes App (Training/Course Material)
-This is a companion repo for the "Introduction to React Native" course. This application is built from scratch throughout the course.
+This is a companion repo for the "Introduction to React Native / Expo" course. This application is built from scratch throughout the course.
 ## About project
-<br/>
 Color Palettes is a React native mobile application to manage color palettes using:
   - Expo features: Expo Router (File-based routing), Expo SDK, Expo dev client
 
